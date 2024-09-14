@@ -41,7 +41,7 @@ namespace ProductApps
         }
 
 
-        private decimal Wrapping
+        public decimal Wrapping
         {
             get { return wrapping; }
             set { wrapping = value; }
@@ -70,6 +70,12 @@ namespace ProductApps
         public void calDelivery()
         {
             Delivery = TotalPayment + 25;
+        }
+
+        //Calculate the total after delivery is added
+        public void calWrapping()
+        {
+            Wrapping = Delivery + 5;
         }
     }
 }
